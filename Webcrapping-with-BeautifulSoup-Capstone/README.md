@@ -9,7 +9,7 @@ Coursebook: Python for Data Analysts
 ## Background
 
 ### US Dollar (USD) To Indonesian Rupiah (IDR) Exchange Rate History
-- We will the US Dollar (USD) to Indonesian Rupiah (IDR) exchange rate history summary page with 180 days of USD to IDR rate historical data from November 14, 2022 to May 12, 2023)
+- We will the US Dollar (USD) to Indonesian Rupiah (IDR) exchange rate history summary page with 180 days of USD to IDR rate 
 
 ## Requirements Library
 
@@ -927,6 +927,74 @@ df.plot(title='US Dollar (USD) To Indonesian Rupiah (IDR) Exchange Rate History'
 
 
 ```python
+df.describe(include='number')
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USDtoIDR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>130.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>15,240.88</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>315.06</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>14,674.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>14,957.75</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>15,208.50</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>15,556.25</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>15,789.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
 df['USDtoIDR'].idxmax()
 ```
 
@@ -939,19 +1007,6 @@ df['USDtoIDR'].idxmax()
 
 
 ```python
-df.max()
-```
-
-
-
-
-    USDtoIDR    15789
-    dtype: int64
-
-
-
-
-```python
 df['USDtoIDR'].idxmin()
 ```
 
@@ -959,32 +1014,6 @@ df['USDtoIDR'].idxmin()
 
 
     Timestamp('2023-04-28 00:00:00')
-
-
-
-
-```python
-df.min()
-```
-
-
-
-
-    USDtoIDR    14674
-    dtype: int64
-
-
-
-
-```python
-df.mean()
-```
-
-
-
-
-    USDtoIDR   15,240.88
-    dtype: float64
 
 
 
